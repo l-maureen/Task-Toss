@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Toss Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+    <div class="heading">
+        <h3>Description of the Design Product Project</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div> <!--Close the heading div-->
+
+    <div class="challenge-container">
+        <h3>Design Product Challenges</h3>
+        <p>Choose which challenges you would do first, second, and third by moving each box to the right div.</p>
+
+        <div id="first">
+            <div class="challenge" draggable="true">Challenge 1</div>
+            <div class="challenge" draggable="true">Challenge 2</div>
+            <div class="challenge" draggable="true">Challenge 3</div>
+        </div>
+        <div id="second"></div>
+    </div> <!--Close the challenge-container-->
+
+    <body>
+        <div class="designlist-container">
+            <div class="designlist-app">
+                <h3>Design List</h3>
+                <p>Please add your step-by-step design process list. If you want to cross out the list, click the content of the list. If you want to delete the list, click on the deleted symbol.</p>
+                <div class="row">
+                    <input type="text" id="input-design" placeholder="Add your text">
+                    <button onclick="addList()">Add List</button>
+                </div>
+                <ul id="design-list">
+                    <!--<li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li>-->
+                </ul>
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

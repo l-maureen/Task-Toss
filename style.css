@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(image/background\ 1.png);
+    background-size: cover;
+    background-position: center;
+
+}
+.heading{
+    /*border: 2px solid black;*/
+    /*The padding of 50px give the top, bottom, right, and left spaces inside the heading div.*/
+    padding: 50px;
+    border-bottom: 2px solid gray;
+}
+.challenge-container{
+    /*border: 2px solid green;*/
+    position: relative;
+    height: 70vh;
+    border-bottom: 2px solid gray;
+}
+.challenge-container h3, .worklist-container h3, .designlist-container h3{
+    padding: 50px;
+}
+.challenge-container p, .designlist-container p{
+    /*border: 2px solid green;*/
+    margin-top: -40px;
+    padding-left: 50px;
+}
+
+#first{
+    border: 2px solid gray;
+    width: 300px;
+    height: 300px;
+    /*Don't need display of inline-block to be aligned with #boxtwo div. It is because of right of 50%. Same concept with #boxtwo div.*/
+    /*display: inline-block;*/
+    position: absolute;
+    right: 50%;
+    margin: 10px 0;
+}
+#second{
+  border: 2px solid gray;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  /*Add position of absolute first before left of 50% or else it won't work. Without the position of absolute, the #boxtwo border will be on the left side of the page.*/
+  left: 50%;
+  margin: 10px 0;
+}
+.challenge{
+    /*border: 2px solid peru;*/
+    height: 60px;
+    background: #000;
+    color: #fff;
+    /*The value of margin gives the top, bottom, left, and right spaces outside the challenge div. It gives space between the #boxtwo div and the challenge div.*/
+    margin: 30px;
+    /*The display of grid and place-content of center center each challenge div.*/
+    display: grid;
+    place-content: center;
+    cursor: grab;
+}
+
+/*Worklist*/
+/*Add these styles in the designlist-container to fix the list in one position regardless when change the css style and javascript.*/
+.designlist-container{
+    /*border: 2px solid red;*/
+    position: relative;
+    height: 70vh;
+    overflow-y: auto;
+}
+.designlist-container .row{
+    /*border: 2px solid gold;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -50px;
+    padding: 40px 0;
+}
+.designlist-container input{
+    /*border: 2px solid purple;*/
+    width: 600px;
+    padding: 10px;
+    margin: 20px 0;
+}
+.designlist-container button{
+     padding: 10px;
+     background: #000;
+     color: #fff;
+     cursor: pointer;    
+}
+ul{
+    /*border: 2px solid blue;*/
+    /*I change the position from absolute to fixed. The ul li goes to the top. */
+    position: absolute;
+    top: 230px;
+    left: 30px;
+    right: 0;
+    margin: 0 330px;
+    width: 700px;
+}
+/*This is where to style the list when the "Add List" button is clicked.*/
+ul li{
+    /*border: 2px solid gray;*/
+    border-bottom: 2px solid gray;
+    list-style-type: none;
+    /*user-select: none;*/
+    cursor: pointer;
+    /*position: relative;*/
+    width: 690px;
+    /*It reduces the left space outside between the left the container div and the unordered list border, moving the ul li close to the center.*/
+    margin-left: 5px;
+    margin-right: 10px;
+    padding: 12px 20px;
+}
+/*This is where the line across the list when the list is clicked.*/
+ul li.checked{
+    /*color: red;*/
+    text-decoration: line-through;
+    cursor: pointer;
+}
+ul li span{
+    /*border: 2px solid green;*/
+    position: absolute;
+    /*Using the margin-left moves the the span to the right, but it wouldn't stay in a fixed position regardless how long is the phrase or words. So, use right or left.*/
+    right: 30px;
+    font-size: 15px;
+}
+@media only screen and (max-width: 700px){
+    .challenge-container p, .designlist-container p{
+        /*border: 2px solid red;*/
+        margin-top: -40px;
+        /*I change the value of the padding-left to 40px to reduce the left space inside the container p.*/
+        padding-left: 10px;
+        /*I add he margin-left of 30px to reduce the left space outside the container p.*/
+        margin-left: 30px;
+        /*I add the margin-right of 30px to reduce the right space outside the container p.*/
+        margin-right: 30px;
+    }   
+    #first{
+        /*border: 2px solid red;*/
+        /*The width of 230px reduces the #first's width.*/
+        width: 230px;
+        height: 300px;
+        /*Don't need display of inline-block to be aligned with #boxtwo div. It is because of right of 50%. Same concept with #boxtwo div.*/
+        /*display: inline-block;*/
+        position: absolute;
+        right: 50%;
+        margin: 10px 0;
+    }
+    #second{
+      /*border: 2px solid black;*/
+      /*The width of 230px reduces the #second's width.*/
+      width: 230px;
+      height: 300px;
+      position: absolute;
+      /*Add position of absolute first before left of 50% or else it won't work. Without the position of absolute, the #boxtwo border will be on the left side of the page.*/
+      left: 50%;
+      margin: 10px 0;
+    }
+    .designlist-container input{
+        /*border: 2px solid purple;*/
+        /*I change the value of the width to 400px to fit the small screen.*/
+        width: 400px;
+        padding: 10px;
+        margin: 20px 0;
+    }
+    ul{
+        /*border: 2px solid blue;*/
+        position: absolute;
+        /*I change the value of the top to 280px to fit the small screen.*/
+        top: 280px;
+        left: 18px;
+        right: 0;
+        /*I change the second value of the margin.*/
+        margin: 0 -10px;
+        padding: 20px;
+        /*I change the value of the width.*/
+        width: 485px;
+    }
+    ul li{
+        /*border: 2px solid green;*/
+        list-style-type: none;
+        /*user-select: none;*/
+        cursor: pointer;
+        /*position: relative;*/
+        /*I change the width.*/
+        width: 483px;
+        /*I change the value of margin-left to -20px to reduce the left space outside the unordered list. In other words, it reduces the space between the ul and the ul li.*/
+        margin-left: -20px;
+        padding: 12px 15px;
+    }
+    ul li span{
+        /*border: 2px solid green;*/
+        position: absolute;
+        /*I change the value of the right to reduce the right space between the unordered list and the span.*/
+        right: 20px;
+        font-size: 15px;
+    }
+}
